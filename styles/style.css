@@ -1,13 +1,30 @@
 *{
     margin: 0;
-    padding: 0;
-    /*font-family: "Poppins", sans-serif;*/
+    padding: 0;    
+}
+
+/*Tipografia*/
+/*Nav*/
+header{
     font-family:"Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-   
+}
+/*Titulos*/
+h1,h2,h3{
+    font-family:"Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic; 
 }
 
+/*Descripcion*/
+p{
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+/*Header*/
 header{
     display: flex;
     justify-content: space-between;
@@ -26,26 +43,119 @@ header nav li{
 header nav li:hover{
     color: rgb(16, 104, 75);  
 }
-
+/*Banner principal*/
 .cont-img{
-    background-color: tomato;
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    width: 100%;
-   
-}
-.cont-img-left{
-    background-color: blue;
-    width: 50%;
-    color: white;
+    justify-content: space-between;    
+    width: 100%;  
+    
 }
 
-.cont-img-right{   
-    color: white;
-    background:url(/assets/original.jpg);
-     background-size: cover;
-   
+.cont-text-left{
+    background-color: brgb(92, 84, 99);
+    color: rgb(0, 0, 0);  
     width: 50%;
-    height: 500px;
+    height: 600px;
+    background-image: url(../assets/images/combinacionL.png);
+    background-size: cover;
+}
+.cont-text-right{     
+    color: rgb(0, 0, 0);  
+    width: 50%; 
+    height: 600px;
+    background-image: url(../assets/images/combinacionL.png);
+    background-size: cover;    
+}
+
+.cont-text-left h2{   
+    padding-left: 50px;
+    padding-top: 100px;
+}
+.cont-text-left p{
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.cont-text-right h2{   
+    padding-right:0px;
+    padding-top: 100px;
+}
+.cont-text-right p{
+    padding-right:0px;
+    padding-top: 10px;
+}
+
+/*Porfolio*/
+
+.porfolio{
+    width: 100%;
+    margin-top: 20px;   
+}
+.porfolio-encabezado{
+    margin-bottom: 30px;
+    padding-left: 30px; 
+    text-align: center; 
+}
+.porfolio p{   
+    color: rgb(99, 98, 98);    
+    font-size: 20px;
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+.porfolio h2{
+    color: black;
+    padding-left: 30px; 
+    font-size: 40px;    
+    padding-top: 20px;
+}
+
+/*Porfolio cards*/
+.cont-card{
+    background-color:rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    padding: 20px 50px;    
+}
+ /*Tarjeta*/
+.card{
+    background-color: rgb(255, 255, 255);   
+    border-radius: 5px;
+    padding: 5px;    
+    box-shadow: -8px 5px 19px -2px rgba(99,99,99,0.8);
+    border: 1px solid rgb(177, 172, 172);
+    position: relative;
+}
+/*Tarjeta - h3*/
+.card h3{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.card img{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;    
+}
+
+/*Tarjeta - p*/
+.card p{
+    font-size:12px;
+    padding-top: 10px;
+    padding-left: 0px;
+    text-align: left;
+}
+/*Tarjeta - enlace*/
+.card a{
+    display: flex;
+    justify-content: end;     
+    margin-top: 50px;
+}
+/*Tarjeta - imagen del enlace*/
+.card a img{    
+    width: 30px;
+    height: 30px; 
+    position: absolute;  
+    bottom: 5px;  
 }
