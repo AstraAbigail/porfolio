@@ -33,6 +33,7 @@ header{
     align-items: center;
     padding-right: 50px;
 }
+/*Logo*/
 header img{
     width: 150px;
     padding-left: 100px;   
@@ -50,6 +51,7 @@ header nav li:hover{
     display: flex;
     justify-content: space-between;    
     width: 100%;  
+    height: 100vh;
     background-color: blueviolet;
     
 }
@@ -57,15 +59,13 @@ header nav li:hover{
 .cont-text-left{
     background-color: brgb(92, 84, 99);
     color: rgb(0, 0, 0);  
-    width: 50%;
-    height: 600px;
+    width: 50%;   
     background-image: url(../assets/images/combinacionL.png);
     background-size: cover;
 }
 .cont-text-right{     
     color: rgb(0, 0, 0);  
-    width: 50%; 
-    height: 600px;
+    width: 50%;    
     background-image: url(../assets/images/combinacionL.png);
     background-size: cover;    
 }
@@ -92,6 +92,7 @@ header nav li:hover{
 
 .porfolio{
     width: 100%;
+    height: 100vh;
     margin-top: 20px;   
 }
 .porfolio-encabezado{
@@ -166,19 +167,17 @@ header nav li:hover{
 
 /*Seccion ESTUDIOS */
 
-.learn{
-    width: 100%;
+.learn{   
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;    
     background-color: rgb(172, 198, 96);
 }
 
 /*.learn-encabezado{
     width: 90%;   
     margin-bottom:30px;
-}
+}*//*
 
 .learn p{   
     color: rgb(99, 98, 98);    
@@ -187,17 +186,43 @@ header nav li:hover{
     font-weight: 400;
     font-style: normal; 
     
-}
+}*/
+/*
 .learn h2{
     color: black;
     margin-bottom: 10px;
     font-size: 40px;    
     padding-top: 20px;
-}
+}*/
 
 /*Estudios habilidades*/
-/*.learn-card{
-    width: 100%;
+.learn-card{
     background-color: rgb(118, 121, 112);
-     
-}*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;   /*se colocan los dos div, uno al lado del otro*/  
+}
+
+.learn-card-habBlandas{
+    width: 50%;
+    display: flex; /*Tengo control de las cordenada para hacer que le contenido se alinea al centro*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-card-habBlandas h3{
+    margin-bottom: 10px;
+}
+
+.learn-card-habTecnicas{
+    width: 50%;
+    display: flex; /*Tengo control de las cordenada para hacer que le contenido se alinea al centro*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-card-habTecnicas h3{
+    margin-bottom: 10px;
+}
