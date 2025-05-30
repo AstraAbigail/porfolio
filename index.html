@@ -16,38 +16,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!--Bootstrap --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+
 </head>
 <body>
     <header>
         <img src="./assets/images/logo.png" alt="logo">
-        <nav>
-            <li>Sobre mi</li>
-            <li>Estudios</li>
-            <li>Porfolio</li>
-            <li>Contacto</li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#sobremi">Sobre mi</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#porfolio">Porfolio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#estudios">Estudio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <!--Banner principal--> 
     <div class="cont-img">
-        <div class="cont-text-left">
-            <h1>artist</h1>
-            <p>Si lo imaginamos, podemos crearlo</p>
-            <!--<div>
-                <img src="./assets/combinacionL.png" alt="">
-            </div>-->           
-        </div>        
-        <div class="cont-text-right">
-            <h1>coder</h1>
-            <p>Si lo hacemos posible, podemos disfrutarlo</p> 
-            <!--<div>
-                <img src="./assets/original.jpg" alt="">
-            </div> -->          
+        <div class="cont-text-left">           
+            <h1>@rtista / programadora</h1>
+            <p>Si lo imaginamos, podemos crearlo!</p>             
         </div>        
     </div>
 
     <main>
         <!--Porfolio--> 
-         <section class="porfolio">
+         <section class="porfolio" id="porfolio">
             <div class="porfolio-encabezado">
                 <h2>.porfolio</h2>
                 <p>Algunos de los proyectos en los que he trabajado y sigo actualmente.</p>  
@@ -62,7 +73,6 @@
                         <img src="./assets/iconos/signo-de-github.png" alt="icono de GitHub">
                     </a>                
                </div>
-
                <div class="card"> 
                     <h3>Arkanoid</h3>              
                     <img src="./assets/images/arkanoide.jpeg" alt="imagen del arkanoide">
@@ -71,12 +81,11 @@
                         <img src="./assets/iconos/signo-de-github.png" alt="icono de GitHub">
                     </a>                
                </div>
-
                <div class="card"> 
                     <h3>RihanApp</h3>              
                     <img src="./assets/images/android.jpg" alt="imagen ilustrativa">
                     <p>Aplicacion móvil inclusiva, permitiendo simular una billetera fisica. Android Studio</p>                
-                    </div>               
+                </div>               
                <div class="card"> 
                     <h3>Scaneo</h3>              
                     <img src="./assets/images/flirOne.jpg" alt="imagen del programa">
@@ -84,8 +93,7 @@
                     <a href="https://www.linkedin.com/in/abigailastradas/#:~:text=1%20aptitud%20m%C3%A1s-,Jefe%20del%20Area%20de%20Tecnologia%20e%20Innovacion%20%2D%20Desarrolladora%20Android%20Studio%20(Java),-Jefe%20del%20Area" title="Ver proyecto">
                         <img src="./assets/iconos/signo-de-github.png" alt="icono de GitHub">
                     </a>                
-               </div>
-               
+               </div>               
                <div class="card"> 
                     <h3>Relevamiento</h3>              
                     <img src="./assets/images/scaneo.jpg" alt="imagen del programa">
@@ -105,96 +113,137 @@
             </div>
          </section>   
         <!--Seccion About me--> 
-        <section class="about">
-            <div>
-                <h2>Sobre mi</h2>
-                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, obcaecati omnis sed eaque vel repellendus perferendis consequuntur delectus ipsam dicta accusantium, maxime non porro minima? Aspernatur eligendi quos impedit dolorum!</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio culpa, veritatis libero quidem vel tempore iure quia nihil? Quia assumenda atque a cumque magnam aspernatur numquam necessitatibus alias rem porro.</p>
-                <div>
-                    <img src="" alt="">
+        <section class="about" id="sobremi">
+            <div class="about-body">
+                <div class="about-text">
+                    <h2>.sobre mi</h2>
+                    <h3>Programadora y artista que vive en Buenos Aires, Argentina.!</h3>
+                    <p>La intuición es una muy buena amiga. Cuando entras en alguna pagina web o aplicación y casi sin darte cuenta estas interactuando de manera sencilla llevando a cabo las acciones que necesitabas, ¡para mi es por ahí!</p>    
+                </div>
+                <div class="about-img">
+                    <img src="./assets/images/1C.webp"  alt="">
                     <div class="about-images">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">  
+                        <img src="./assets/images/obra1.webp" alt="imagen de obra teatral">
+                        <img src="./assets/images/obra2.webp" alt="imagen de obra teatral">
+                        <img src="./assets/images/obra3.webp" alt="imagen de obra teatral"> 
+                        <img src="./assets/images/obra4.webp" alt="imagen de obra teatral">   
                     </div>
                 </div>
             </div>
         </section>
         <!--Seccion Estudios--> 
-        <section class="learn">
+        <section class="learn" id="estudios">
             <div class="learn-encabezado">
                 <h2>.estudios</h2>
-                <p> En el 2015 comence a formarme en las artes de la actuacion pasando por varias escuelas y profesores en la ciudad de Buenos Aires. En el 2019 volvi a mi ciudad natal Bahia Blanca y comence la carrera de Analista en Sistemas hasta el dia de hoy que continuo formandome. Tomo lo mejor de mis dos mundos el arte y la lógica.</p>
+                <p>En el 2015 comence a formarme en las artes de la actuacion pasando por varias escuelas y profesores en la ciudad de Buenos Aires. En el 2019 volvi a mi ciudad natal Bahia Blanca y comence la carrera de Analista en Sistemas hasta el dia de hoy que continuo formandome. Tomo lo mejor de mis dos mundos el arte y la lógica.</p>
             </div>
             <div class="learn-card">
                 <div class="learn-card-habBlandas">
                     <h3>.habilidades blandas</h3>
                     <ul>
-                        <li>Aprendizaje continuo</li>
-                        <li>Autodidacta</li>
-                        <li>Resolucion de conflictos</li>
-                        <li>Comunicacion</li>
-                        <li>Sociabilidad</li>
-                        <li>Trabajo en equipo</li>
-                        <li>Creatividad</li>
+                        <li>✅Aprendizaje continuo</li>
+                        <li>✅Autodidacta</li>
+                        <li>✅Resolucion de conflictos</li>
+                        <li>✅Comunicacion</li>
+                        <li>✅Sociabilidad</li>
+                        <li>✅Trabajo en equipo</li>
+                        <li>✅Creatividad</li>
                     </ul>
                 </div>
                 <div class="learn-card-habTecnicas">
                     <h3>.herramientas</h3>
-                    <div>
-                        <img src="" alt="icono de python">
-                        <img src="" alt="icono de sql">
-                        <img src="" alt="icono de android studio">
-                        <img src="" alt="icono de java">
-                        <img src="" alt="icono de kotlin">
-                        <img src="" alt="icono de html">
-                        <img src="" alt="icono de css">
-                        <img src="" alt="icono de java">
-                        <img src="" alt="icono de git">
-                        <img src="" alt="icono de QT Designer">
-                        <img src="" alt="icono de wordpress">
+                    <div class="learn-card-habTecnicas-img">
+                        <div>
+                            <img src="./assets/iconos/ic_python.png" alt="icono de python"> 
+                        </div>
+                        <div>
+                            <img src="./assets/iconos/ic_mysql.png" alt="icono de sql">
+                        </div>                                         
+                        <div>
+                            <img src="./assets/iconos/ic_android_studio.png" alt="icono de android studio">
+                        </div>
+                        <div>
+                           <img src="./assets/iconos/ic_kotlin.png" alt="icono de kotlin">
+                        </div>
+                        <div>
+                            <img src="./assets/iconos/ic_java.png" alt="icono de java">
+                        </div>                        
+                        <div>
+                           <img src="./assets/iconos/ic_css.png" alt="icono de css">
+                        </div>
+                        <div>
+                            <img src="./assets/iconos/ic_html.png" alt="icono de wordpress">
+                        </div>  
+                        <div>
+                            <img src="./assets/iconos/ic_git.png" alt="icono de git">
+                        </div>
+                        <div>
+                            <img src="./assets/iconos/ic_qtdesigner.png" alt="icono de QT Designer">
+                        </div>
+                        <div>
+                            <img src="./assets/iconos/ic_wordpress.png" alt="icono de wordpress">
+                        </div>                    
                     </div>
                 </div>
             </div>
         </section>
         <!--Seccion Contacto--> 
-        <section class="contact">
+        <section class="contact" id="contacto">
             <div>
-                <h2>contact</h2>
-                <form action="">
-                    <label for="nombre">Nombre</label>
-                    <input id=nombre type="text" required>
-                    
-                    <label for="email">Email</label>
-                    <input id=email type="email" required>
-                    
-                    <label for="mensaje">Mensaje</label>
-                    <input id=mensaje type="text" required>
-                </form>
-                <button>Enviar</button>
-                <div class="redes">
-                    <ol>
-                        <li><a href="">Email</a></li>
-                        <li><a href="">Instagram</a></li>
-                        <li><a href="">GitHub</a></li>
-                        <li><a href="">Linkedin</a></li>
-                    </ol>
-                </div>    
+                <h2>.contacto</h2>
+                <div class="contact-body">
+                    <div class="form">
+                        <form action="https://formsubmit.co/astrabigail@gmail.com" method="POST">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nombre@ejemplo.com">
+                                </div>
+                                <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"  name="mensaje"  rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="redes">
+                        <ol>
+                            <li>
+                                <a href="mailto:astrabigail@gmail.com">
+                                <img src="./assets/iconos/mail.png" alt="logo de correo electronico">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/astradasabigail/">
+                                <img src="./assets/iconos/ic-instagram.png" alt="logo de instagram"> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/AstraAbigail">
+                                <img src="./assets/iconos/signo-de-github.png" alt="logo de github"> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/abigailastradas/">
+                                <img src="./assets/iconos/linkedin.png" alt="logo de linkedin"> 
+                                </a>
+                            </li>
+                        </ol>
+                    </div> 
+                </div>   
             </div>
         </section>
-    </main>    
+    </main> 
+    <!--Boton volver arriba-->  
+    <div class="enlace-arriba" >
+        <a href="#navbarNav">
+             <img src="./assets/iconos/flecha-hacia-arriba.png" alt="boton volver arriba">
+        </a> 
+    </div>
+    
     <!--Pie de pagina--> 
     <footer>
-        <img src="" alt="icono de copyright">
+        <img src="./assets/iconos/copyright.png" alt="icono de copyright">
         <h4>2025 - A&M </h4>
-         <div class="footer-redes">
-                    <ol>
-                        <li><a href="">Email</a></li>
-                        <li><a href="">Instagram</a></li>
-                        <li><a href="">GitHub</a></li>
-                        <li><a href="">Linkedin</a></li>
-                    </ol>
-                </div>       
     </footer>
 </body>
 </html>

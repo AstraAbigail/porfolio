@@ -1,7 +1,7 @@
 *{
     margin: 0;
-    padding: 0;   
-    overflow-x: hidden;
+    padding: 0;  
+    box-sizing: border-box;   
  
 }
 
@@ -35,64 +35,44 @@ header{
 }
 /*Logo*/
 header img{
-    width: 150px;
+    width: 200px;
     padding-left: 100px;   
 }
-header nav li{
-    display: inline;
-    padding: 20px;
-    font-size: 20px;  
-}
-header nav li:hover{
-    color: rgb(16, 104, 75);  
-}
 /*Banner principal*/
-.cont-img{
-    display: flex;
-    justify-content: space-between;    
+.cont-img{     
     width: 100%;  
     height: 100vh;
     background-color: blueviolet;
-    
+      
 }
 
 .cont-text-left{
-    background-color: brgb(92, 84, 99);
-    color: rgb(0, 0, 0);  
-    width: 50%;   
-    background-image: url(../assets/images/combinacionL.png);
+    background:url(../assets/images/artista.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-}
-.cont-text-right{     
-    color: rgb(0, 0, 0);  
-    width: 50%;    
-    background-image: url(../assets/images/combinacionL.png);
-    background-size: cover;    
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
 }
 
-.cont-text-left h2{   
+.cont-text-left h1{ 
+      
     padding-left: 50px;
     padding-top: 100px;
+    color: white;
 }
 .cont-text-left p{
     padding-left: 50px;
-    padding-top: 10px;
+    padding-top: 10px;  
+    color: white;
 }
 
-.cont-text-right h2{   
-    padding-right:0px;
-    padding-top: 100px;
-}
-.cont-text-right p{
-    padding-right:0px;
-    padding-top: 10px;
-}
+
 
 /*Porfolio*/
 
 .porfolio{
     width: 100%;
-    height: 100vh;
     margin-top: 20px;   
 }
 .porfolio-encabezado{
@@ -120,8 +100,7 @@ header nav li:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 20px;
-    padding: 20px 50px; 
-        
+    padding: 20px 50px;       
 }
  /*Tarjeta*/
 .card{
@@ -129,10 +108,9 @@ header nav li:hover{
     border-radius: 5px;
     padding: 5px;    
     box-shadow: -8px 5px 19px -2px rgba(99,99,99,0.8);
-    border: 1px solid rgb(177, 172, 172);
-    position: relative;
+    border: 1px solid rgb(177, 172, 172);    
 }
-/*Tarjeta - h3*/
+
 .card h3{
     font-size: 20px;
     padding: 5px;
@@ -143,66 +121,55 @@ header nav li:hover{
     height: 150px;
     border-radius: 5px;    
 }
-
-/*Tarjeta - p*/
 .card p{
     font-size:12px;
     padding-top: 10px;
     padding-left: 0px;
     text-align: left;
 }
-/*Tarjeta - enlace*/
 .card a{
     display: flex;
     justify-content: end;     
     margin-top: 50px;
 }
-/*Tarjeta - imagen del enlace*/
 .card a img{    
     width: 30px;
-    height: 30px; 
-    position: absolute;  
-    bottom: 5px;  
+    height: 30px;
 }
 
 /*Seccion ESTUDIOS */
-
-.learn{   
-    height: 100vh;
+.learn{ 
+    width: 100%;
+    margin-top: 20px;    
     display: flex;
     flex-direction: column;    
-    background-color: rgb(172, 198, 96);
 }
-
-/*.learn-encabezado{
-    width: 90%;   
+.learn-encabezado{
+    width: 90%;
     margin-bottom:30px;
-}*//*
-
+    padding-left: 30px;
+    padding-right: 30px; 
+    text-align: center; 
+}
 .learn p{   
     color: rgb(99, 98, 98);    
-    font-size: 15px;
+    font-size: 20px;
     font-family:"Poppins", sans-serif;
     font-weight: 400;
     font-style: normal; 
-    
-}*/
-/*
+}
 .learn h2{
     color: black;
-    margin-bottom: 10px;
+    padding-bottom: 30px;
     font-size: 40px;    
     padding-top: 20px;
-}*/
-
+}
 /*Estudios habilidades*/
 .learn-card{
-    background-color: rgb(118, 121, 112);
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;   /*se colocan los dos div, uno al lado del otro*/  
 }
-
 .learn-card-habBlandas{
     width: 50%;
     display: flex; /*Tengo control de las cordenada para hacer que le contenido se alinea al centro*/
@@ -210,19 +177,163 @@ header nav li:hover{
     justify-content: center;
     align-items: center;
 }
+.learn-card-habBlandas ul li{
+    list-style-type: none;
+    font-size: 15px;
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
 
 .learn-card-habBlandas h3{
     margin-bottom: 10px;
 }
-
+/*Estudios herramientas*/
 .learn-card-habTecnicas{
     width: 50%;
-    display: flex; /*Tengo control de las cordenada para hacer que le contenido se alinea al centro*/
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+.learn-card-habTecnicas h3{
+    margin-bottom: 20px;
+}
+.learn-card-habTecnicas-img{
+    width: 100%;
+    display: grid; /*Tengo control de las cordenada para hacer que le contenido se alinea al centro*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.learn-card-habTecnicas-img div{
+    background-color: rgb(206, 196, 194);
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.learn-card-habTecnicas-img div img {
+    width: 60px;
+    height: 60px;    
+    padding: 5px;
 }
 
-.learn-card-habTecnicas h3{
-    margin-bottom: 10px;
+/*Seccion About*/
+
+.about{
+    width: 100%;
+    background-color:#ecf0f1;  
+    padding: 20px; 
+}
+.about-body{
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+    
+}
+.about-text{
+    width: 50%;
+    padding-left: 50px;
+}
+.about h2{
+    color: black;
+    font-size: 40px;    
+    padding-top: 20px;   
+}
+
+.about h3{
+    color: black;    
+    font-size: 20px;      
+}
+
+.about p{
+    color: rgb(99, 98, 98);    
+    font-size: 15px;
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 10px;
+}
+
+.about-img{
+    width: 50%;    
+}
+.about-img img{
+    width: 85%;
+    border-radius:5px ;
+    box-shadow: -8px 5px 19px -2px rgba(255, 255, 255, 0.8);
+}
+
+.about-images{
+    margin-top: 15px;
+    width:200px;
+    height: 150px;
+    display: flex;  
+}
+.about-images img{
+    margin-right: 8px;
+    border-radius: 5px;
+}
+
+/*contacto*/
+
+.contact{
+    width: 100%;   
+    background-color:#ecf0f1; 
+    margin-bottom: 20px;
+    padding-bottom: 20px; 
+}
+
+.contact h2{
+    color: black;
+    font-size: 40px;    
+    padding-top: 20px; 
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-body{
+    display: flex;
+}
+
+.form{
+    width: 50%;
+    padding-left: 50px;
+}
+
+.redes{
+    width: 50%;
+}
+.redes ol{
+    display: flex;
+    justify-content:center;
+
+}
+
+.redes ol li{
+    list-style-type: none;
+}
+.redes ol li a img{
+    width: 50px;
+    padding-right: 10px;
+}
+/*Boton volver arriba*/
+.enlace-arriba{
+    width:70px;
+    position: fixed;
+    bottom:0;
+    right: 0;
+    padding: 10px;
+}
+.enlace-arriba a img{
+   width: 100%;
+}
+
+/*Footer*/
+footer{
+    display: flex;    
+}
+
+footer img{
+    width: 20px;
+    height: 20px;   
+}
+footer h4{
+    color: black;
+    font-size: 20px;    
 }
