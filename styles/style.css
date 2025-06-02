@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;  
-    box-sizing: border-box;   
+    box-sizing: border-box; 
  
 }
 
@@ -29,41 +29,40 @@ p{
 /*Header*/
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding-right: 20px;
-}
+}   
+    
 /*Logo*/
 header img{
     width: 200px;
     padding-left: 100px;   
 }
+body{
+    width: 100vw;    
+}
+
+
 /*Banner principal*/
 .cont-img{     
     width: 100%;  
-    height: 100vh;
-    background-color: blueviolet;
-      
+    height: 100vh; 
 }
 
 .cont-text-left{
     background:url(../assets/images/original4.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
+    background-size: cover;    
     width: 100%;
-    height: 100vh;
+    height: 100%
 }
 
-.cont-text-left h1{ 
-      
+.cont-text-left h1{       
     padding-left: 50px;
     padding-top: 300px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 4px #000;
-    animation: mostrar-titulo 2s alternate forwards;
-   
-}
+}    
 .cont-text-left p{
     padding-left: 50px;
     padding-top: 10px;  
@@ -146,14 +145,12 @@ header img{
     width: 100%;
     margin-top: 20px;    
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    align-items: center; 
+    
 }
 .learn-encabezado{
-    width: 90%;
-    margin-bottom:30px;
-    padding-left: 30px;
-    padding-right: 30px; 
-    text-align: center; 
+    width: 90%;  
 }
 .learn p{   
     color: rgb(99, 98, 98);    
@@ -162,7 +159,8 @@ header img{
     font-weight: 400;
     font-style: normal; 
 }
-.learn h2{
+.learn h2{  
+    text-align: center;  /*no entiendo porque no se alinea con align flex*/
     color: black;
     padding-bottom: 30px;
     font-size: 40px;    
@@ -170,16 +168,15 @@ header img{
 }
 /*Estudios habilidades*/
 .learn-card{
+    width: 90%;
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;   /*se colocan los dos div, uno al lado del otro*/  
+    flex-direction:row;
 }
 .learn-card-habBlandas{
     width: 50%;
-    display: flex; /*Tengo control de las cordenada para hacer que le contenido se alinea al centro*/
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-left: 200px ;   
 }
 .learn-card-habBlandas ul li{
     list-style-type: none;
@@ -202,7 +199,9 @@ header img{
 .learn-card-habTecnicas-img{
     width: 100%;
     display: grid; /*Tengo control de las cordenada para hacer que le contenido se alinea al centro*/
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    justify-content: center;
 }
 .learn-card-habTecnicas-img div{
     background-color: rgb(206, 196, 194);
@@ -227,7 +226,7 @@ header img{
 .about-body{
     display: flex;
     justify-content:center;
-    align-items: center; 
+    align-items:center;
     
 }
 .about-text{
@@ -255,22 +254,32 @@ header img{
 }
 
 .about-img{
-    width: 50%;    
+    width: 50%;   
 }
 .about-img img{
-    width: 85%;
+    width: 95%;
     border-radius:5px ;
     box-shadow: -8px 5px 19px -2px rgba(255, 255, 255, 0.8);
 }
 
 .about-images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(50px,180px));
+    grid-template-rows: repeat(auto-fit, minmax(50px,200px)); 
+    justify-content: center;  
     margin-top: 15px;
-    width:200px;
-    height: 150px;
-    display: flex;  
+    gap:5px;
+   
+     
+}.about-images img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
+
 .about-images img{
-    margin-right: 8px;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
 }
 
@@ -342,3 +351,129 @@ footer h4{
     font-size: 20px;    
 }
 
+/* Media querie para tablet */
+@media (max-width: 880px) {
+    
+    /*Banner*/
+    .cont-text-left h1{       
+        padding-left: 20px;
+        padding-top: 100px; 
+        font-size: 20px;    
+    }
+    .cont-text-left p{
+        padding-left:20px;
+        padding-top: 5px; 
+        font-size: 15px; 
+    }
+
+    /*sobre mi*/
+    .about-text{    
+        padding-left: 25px;
+    }
+    .about h2{     
+        padding-top: 10px;   
+    }
+    .about h3{      
+        font-size: 15px;      
+    }
+    .about p{       
+        font-size: 12px;   
+        padding-right: 20px;
+    }
+
+    .about-img{
+        width: 50%;    
+    }
+    .about-img img{
+        width: 90%;
+        border-radius:5px ;
+        box-shadow: -8px 5px 19px -2px rgba(255, 255, 255, 0.8);
+    }   
+
+    .about-images img{
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    }
+
+    /*estudios*/   
+    .learn p{       
+    font-size: 15px;
+    }
+    .learn h2{     
+    font-size: 40px;    
+    }   
+    .learn-card-habBlandas{
+        padding-left: 10px;
+    }   
+
+}
+
+ 
+/* Media querie para celulares */
+@media (max-width: 480px){
+    
+    /*Banner*/
+    .cont-text-left h1{        
+        font-size: 12px;    
+    }
+    .cont-text-left p{      
+        font-size: 12px; 
+    }
+
+    /*sobre mi*/
+    /*deberia ir uno abajo del otro*/
+
+   
+    .about-body{
+        display: flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center; 
+        background-color: aqua;      
+    }
+    
+    
+    .about-text{  
+        width: 100%;  
+        
+        background-color: violet;
+    }
+    
+    .about-img{
+        display: flex;
+        flex-direction: column;
+        background-color: yellow;
+        width: 100%; 
+        
+    }
+    
+    .about-images{
+        display: flex;
+        flex-direction: column !important;
+        background-color: yellow;
+        width: 100%;        
+    }
+    .about-images img{
+        width:50px ;
+        height:50px ;
+    }
+
+   
+
+    
+
+    /*estudios*/   
+    .learn p{       
+    font-size: 15px;
+    }
+    .learn h2{     
+    font-size: 40px;    
+    }   
+    .learn-card-habBlandas{
+        padding-left: 10px;
+    }   
+
+}
+
+      
