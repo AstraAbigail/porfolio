@@ -62,12 +62,14 @@ body{
     padding-top: 300px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 4px #000;
+    animation: mover-de-izq-der 3s 1 ;  
 }    
 .cont-text-left p{
     padding-left: 50px;
     padding-top: 10px;  
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 4px #000;
+    animation: mover-de-izq-der 3s 1 ;  
 }
 
 
@@ -95,6 +97,7 @@ body{
     padding-left: 30px; 
     font-size: 40px;    
     padding-top: 20px;
+    
 }
 
 /*Porfolio cards*/
@@ -236,7 +239,8 @@ body{
 .about h2{
     color: black;
     font-size: 40px;    
-    padding-top: 20px;   
+    padding-top: 20px; 
+   
 }
 
 .about h3{
@@ -293,6 +297,7 @@ body{
     padding-top: 20px; 
     text-align: center;
     margin-bottom: 15px;
+    
 }
 
 .contact-body{
@@ -345,6 +350,30 @@ footer h4{
     color: black;
     font-size: 20px;    
 }
+
+
+
+
+/*Animaiciones por Scroll*/
+
+h2{
+    view-timeline-name: --h2;
+    view-timeline-axis: block;
+    animation-timeline: --h2;
+    animation-name: mover-de-izq-der;
+    animation-fill-mode:initial;
+}
+
+
+
+@keyframes mover-de-izq-der{
+    from {
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}    
 
 /* Media querie para tablet */
 @media (max-width: 880px) {
@@ -402,6 +431,14 @@ footer h4{
         padding-left: 10px;
     }   
 
+    @keyframes mover-de-izq-der{
+    from {
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+
 }
 
  
@@ -455,8 +492,19 @@ footer h4{
     }   
     .learn-card-habBlandas{
         padding-left: 10px;
-    }   
+    }  
+    
+    
+
+    @keyframes mover-de-izq-der{
+    from {
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+} 
 
 }
 
-      
+
