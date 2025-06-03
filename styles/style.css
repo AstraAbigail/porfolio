@@ -376,7 +376,7 @@ h2{
 }    
 
 /* Media querie para tablet */
-@media (max-width: 880px) {
+@media (max-width: 880px){
     
     /*Banner*/
     .cont-text-left h1{       
@@ -432,11 +432,12 @@ h2{
     }   
 
     @keyframes mover-de-izq-der{
-    from {
-        transform: translateX(-200px);
-    }
-    to{
-        transform: translateX(10px);
+        from {
+            transform: translateX(-200px);
+        }
+        to{
+            transform: translateX(10px);
+        }
     }
 
 }
